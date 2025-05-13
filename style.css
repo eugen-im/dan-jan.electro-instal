@@ -1,28 +1,59 @@
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
-  padding: 0;
+  font-family: Arial, sans-serif;
 }
 
-header {
-  background-color: #002f6c;
+/* BANNER */
+.banner {
+  background-image: url('images/banner.jpg'); /* Poți schimba sau comenta dacă nu ai imagine */
+  background-size: cover;
+  background-position: center;
   color: white;
-  padding: 20px;
   text-align: center;
+  padding: 60px 20px;
+  background-color: #004080; /* Culoare fallback */
 }
 
-nav a {
-  margin: 0 15px;
+.banner h1 {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+.banner p {
+  margin-top: 10px;
+  font-size: 1.2em;
+}
+
+/* MENIU */
+.main-nav {
+  background-color: #333;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.main-nav a {
   color: white;
   text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+  transition: color 0.3s ease;
 }
 
+.main-nav a:hover {
+  color: #00ccff;
+}
+
+/* SECTIUNI */
 section {
-  padding: 20px;
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: auto;
 }
 
 footer {
-  background-color: #ccc;
+  background-color: #f2f2f2;
   text-align: center;
-  padding: 10px;
+  padding: 20px;
+  font-size: 0.9em;
+  color: #333;
 }
