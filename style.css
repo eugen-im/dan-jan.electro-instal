@@ -24,23 +24,31 @@ body {
   font-size: 1.2em;
 }
 
-/* MENIU */
+/* Meniu de navigare ca butoane */
 .main-nav {
-  background-color: #333;
-  text-align: center;
-  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background-color: #222;
+  padding: 15px 0;
 }
 
-.main-nav a {
-  color: white;
+.main-nav .nav-btn {
   text-decoration: none;
-  margin: 0 15px;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
   font-weight: bold;
-  transition: color 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
 }
 
-.main-nav a:hover {
-  color: #00ccff;
+/* Efect hover */
+.main-nav .nav-btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
 }
 
 /* SECTIUNI */
