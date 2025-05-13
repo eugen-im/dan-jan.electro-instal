@@ -5,6 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Programări Online</title>
   <link rel="stylesheet" href="style.css">
+  <!-- FullCalendar CSS & JS -->
+<link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
+<style>
+  #calendar {
+    max-width: 900px;
+    margin: 50px auto;
+  }
+</style>
 </head>
 <body>
 
@@ -17,7 +26,24 @@
     <a class="nav-btn" href="index.html">Acasă</a>
     <a class="nav-btn" href="programari.html">Programări</a>
   </nav>
-
+  <div id="calendar"></div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const calendarEl = document.getElementById('calendar');
+      const calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: 'dayGridMonth',
+        locale: 'ro',
+        headerToolbar: {
+          left: 'prev,next today',
+          center: 'title',
+          right: 'dayGridMonth,listWeek'
+        },
+        events: 'http://volta-instal.kesug.com/incarca_programari.php' // <- aici se conectează la PHP-ul tău
+      });
+  
+      calendar.render();
+    });
+  </script>
   <section class="form-section">
     <form class="booking-form" action="http://volta-instal.kesug.com/salveaza.php" method="POST">
       <label for="nume">Nume:</label>
